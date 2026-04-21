@@ -1,0 +1,175 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Exo 2', sans-serif;
+    overflow-x: hidden;
+    cursor: none;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-orbitron {
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+
+  option {
+    background-color: #0e0e0e;
+    color: #ffffff;
+  }
+}
+
+@layer utilities {
+  .all-caps {
+    text-transform: uppercase;
+  }
+
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #000000;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #353534;
+    border-radius: 0px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #474747;
+  }
+
+  .hud-bg {
+    background-image: 
+      linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 80px 80px;
+    background-position: center center;
+  }
+
+  .hud-node {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background-color: #ffffff;
+  }
+
+  .text-stroke-ghost {
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.15);
+  }
+
+  .ghost-border-hover:hover {
+    box-shadow: inset 0 0 0 1px #ffffff;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-on-primary uppercase font-bold tracking-[2px] px-8 py-4 relative overflow-hidden transition-all duration-300;
+    font-family: 'Orbitron', sans-serif;
+  }
+  .btn-primary:hover {
+    background: linear-gradient(180deg, #ffffff 0%, #ababab 100%);
+  }
+
+  .btn-outline {
+    @apply bg-transparent text-primary border border-white/20 uppercase font-bold tracking-[2px] px-8 py-4 transition-all duration-300;
+    font-family: 'Orbitron', sans-serif;
+  }
+  .btn-outline:hover {
+    @apply border-white bg-white/5;
+  }
+
+  .hud-input {
+    @apply bg-surface-container-lowest border-none border-b border-outline-variant text-primary p-4 w-full transition-all duration-300;
+    font-family: 'Exo 2', sans-serif;
+  }
+  .hud-input:focus {
+    @apply outline-none border-primary;
+    background: linear-gradient(180deg, #0e0e0e 0%, rgba(255,255,255,0.03) 100%);
+  }
+}
+
+/* Custom Cursor CSS - Will be used by the React component */
+.cursor-outer {
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(255,255,255,0.5);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: width 0.2s, height 0.2s, background-color 0.2s;
+    mix-blend-mode: difference;
+}
+.cursor-inner {
+    width: 8px;
+    height: 8px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: difference;
+}
+
+/* Scroll Progress */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: rgba(255,255,255,0.1);
+    z-index: 9998;
+}
+.scroll-progress-bar {
+    height: 100%;
+    background: #ffffff;
+}
+
+/* Contact Form Scans */
+input:focus ~ .scan-line, textarea:focus ~ .scan-line {
+    height: 100%;
+    opacity: 1;
+}
+
+.scan-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: linear-gradient(to top, rgba(255,255,255,0.03) 0%, transparent 100%);
+    pointer-events: none;
+    transition: height 0.3s ease-out, opacity 0.3s ease-out;
+    opacity: 0;
+    z-index: 0;
+}
+
+/* Marquee Animation */
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+    animation: marquee 30s linear infinite;
+}
+
+.animate-marquee:hover {
+    animation-play-state: paused;
+}
