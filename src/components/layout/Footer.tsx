@@ -6,13 +6,13 @@ export function Footer() {
       <div className="flex flex-col items-center md:items-start gap-2">
         <div className="font-orbitron font-bold tracking-[4px] text-lg text-white">NEXO.BVB</div>
         <div className="font-exo-2 tracking-[1.5px] uppercase text-[10px] text-zinc-600">
-          ©2024 ARCHITECT HUD. ALL RIGHTS RESERVED.
+          ©2024 NEXO. TODOS OS DIREITOS RESERVADOS.
         </div>
       </div>
       
       <div className="flex flex-wrap justify-center md:justify-end gap-6 font-exo-2 tracking-[1.5px] uppercase text-xs">
-        <Link to="#" className="text-zinc-600 hover:text-white transition-colors duration-200">PRIVACY POLICY</Link>
-        <Link to="#" className="text-zinc-600 hover:text-white transition-colors duration-200">TERMS OF SERVICE</Link>
+        <Link to="#" className="text-zinc-600 hover:text-white transition-colors duration-200">POLÍTICA DE PRIVACIDADE</Link>
+        <Link to="#" className="text-zinc-600 hover:text-white transition-colors duration-200">TERMOS DE SERVIÇO</Link>
         <a href="https://www.instagram.com/nexo.bvb/" target="_blank" rel="noopener noreferrer" className="text-zinc-600 hover:text-white transition-colors duration-200">INSTAGRAM</a>
         <a href="#" className="text-zinc-600 hover:text-white transition-colors duration-200">LINKEDIN</a>
       </div>
