@@ -20,8 +20,8 @@ export function Contact() {
     setFormStatus('loading');
 
     try {
-      // Using FormSubmit.co - The first time this runs, it will send an activation email to contatoegceccon@gmail.com
-      const response = await fetch("https://formsubmit.co/ajax/contatoegceccon@gmail.com", {
+      // Using FormSubmit.co - The first time this runs, it will send an activation email to nexo.bvbcontato@gmail.com
+      const response = await fetch("https://formsubmit.co/ajax/nexo.bvbcontato@gmail.com", {
         method: "POST",
         headers: { 
             'Content-Type': 'application/json',
@@ -101,7 +101,7 @@ export function Contact() {
                 {/* Contact Items */}
                 <div className="flex flex-col gap-4">
                   {[
-                  { icon: 'mail', label: 'E-MAIL PRINCIPAL', value: 'contatoegceccon@gmail.com' },
+                  { icon: 'mail', label: 'E-MAIL PRINCIPAL', value: 'nexo.bvbcontato@gmail.com' },
                   { icon: 'chat', label: 'WHATSAPP / SIGNAL', value: '(95) 98440-1878' },
                   { icon: 'photo_camera', label: 'INSTAGRAM', value: '@nexo.bvb' },
                   { icon: 'location_on', label: 'OPERAÇÕES', value: 'Boa Vista, Roraima' },
