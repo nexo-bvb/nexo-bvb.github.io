@@ -13,7 +13,7 @@ export function Footer() {
       <div className="flex flex-wrap justify-center md:justify-end gap-6 font-exo-2 tracking-[1.5px] uppercase text-xs">
         <Link to="#" className="text-zinc-600 hover:text-white transition-colors duration-200">PRIVACY POLICY</Link>
         <Link to="#" className="text-zinc-600 hover:text-white transition-colors duration-200">TERMS OF SERVICE</Link>
-        <a href="#" className="text-zinc-600 hover:text-white transition-colors duration-200">INSTAGRAM</a>
+        <a href="https://www.instagram.com/nexo.bvb/" target="_blank" rel="noopener noreferrer" className="text-zinc-600 hover:text-white transition-colors duration-200">INSTAGRAM</a>
         <a href="#" className="text-zinc-600 hover:text-white transition-colors duration-200">LINKEDIN</a>
       </div>
     </footer>
